@@ -1,0 +1,14 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #B2FF66;
+    font-family: Helvetica, sans-serif; 
+    padding: 50px;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+}
+
