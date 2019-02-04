@@ -1,39 +1,38 @@
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Shuffle Array</title>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>Shuffle Array</title>     
+        
+        <link rel="stylesheet" href="style.css" />
+        <script src="javascript.js" defer></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <fieldset id="surround">
+                <legend id="title">Shuffle Array</legend>
+                <p>
+                    This program creates an array from nine values you enter.<br />
+                    Click the 'Save' button to see your array.<br />
+                    Click the 'Shuffle' button to see your array shuffled.
+                </p>
+                <form  id="input">
+                    <input type="text" class="words" id="one" /><br />
+                    <input type="text" class="words" id="two" /><br />
+                    <input type="text" class="words" id="three" /><br />
+                    <input type="text" class="words" id="four" /><br />
+                    <input type="text" class="words" id="five" /><br />
+                    <input type="text" class="words" id="six" /><br />
+                    <input type="text" class="words" id="seven" /><br />
+                    <input type="text" class="words" id="eight" /><br />
+                    <input type="text" class="words" id="nine" /><br /><br />
 
-    <link href="style.css" rel="stylesheet" />
-</head>
-<body>
-    <div id="wrapper">
-        <fieldset id="surround">
-            <legend id="title">Shuffle Array</legend>
-            <p>
-                This program creates an array from nine values you enter.<br />
-                Click the 'Save' button to see your array.<br />
-                Click the 'Shuffle' button to see your array shuffled.
-            </p>
-            <form  id="input">
-                <input type="text" class="words" id="one" /><br />
-                <input type="text" class="words" id="two" /><br />
-                <input type="text" class="words" id="three" /><br />
-                <input type="text" class="words" id="four" /><br />
-                <input type="text" class="words" id="five" /><br />
-                <input type="text" class="words" id="six" /><br />
-                <input type="text" class="words" id="seven" /><br />
-                <input type="text" class="words" id="eight" /><br />
-                <input type="text" class="words" id="nine" /><br /><br />
-
-                <button type="button" id="saveButton" prevent-default >Print</button><br /><br />
-                <div id="arrayDiv"></div><br />
-                <button type="button" id="shuffleButton" prevent-default >Shuffle</button><br /><br />
-                <div id="shuffledArrayDiv"></div><br />
-            </form>  
-        </fieldset>
-    </div>
-    
-    <script src="javascript.js"></script>
-</body>
+                    <button type="button" id="saveButton"  >Print</button><br /><br />
+                    <div id="arrayDiv"></div><br />
+                    <button type="button" id="shuffleButton"  >Shuffle</button><br /><br />
+                    <div id="shuffledArrayDiv"></div><br />
+                </form>  
+            </fieldset>
+        </div>
+    </body>
 </html>
