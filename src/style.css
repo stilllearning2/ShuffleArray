@@ -26,7 +26,7 @@ body {
 }
 
 .words {
-    size: 25px;
+    width: 150px;
 }
 
 #shuffledArrayDiv, #arrayDiv {
