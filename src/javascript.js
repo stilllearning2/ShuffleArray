@@ -1,16 +1,15 @@
-"use strict";
-// add window eventListener for Load
-window.addEventListener("load", init);
+/*global window: false */
+/*global document: false */
 
 function saveArray() {
-    var form = document.querySelector("form"),
-        arrayDiv = form.querySelector("#arrayDiv"),
-        inputs = form.getElementsByTagName( "input" ),
+    'use strict';
+    var arrayDiv = document.querySelector("#arrayDiv"),
+        inputs = document.getElementsByTagName("input"),
         output = [],
         i;
     
     // load words to array
-    for (i = 0; i < inputs.length; i++) {
+    for (i = 0; i < inputs.length; i = i + 1) {
         output.push(inputs[i].value);
     }  
     
@@ -19,10 +18,11 @@ function saveArray() {
 }
 
 function shuffleArray() {
-    var form = document.querySelector("form"),
-        shuffledArray = new Array(),
-        shuffledArrayDiv = form.querySelector("#shuffledArrayDiv"),   
-        start = form.querySelector("#arrayDiv").innerHTML,
+    'use strict';
+
+    var shuffledArray = [],
+        shuffledArrayDiv = document.querySelector("#shuffledArrayDiv"),   
+        start = document.querySelector("#arrayDiv").innerHTML,
         startArray = start.split(", "),
         lngth = startArray.length,
         i,
@@ -40,14 +40,14 @@ function shuffleArray() {
 }
 
 function init() {
-    var form = document.querySelector("form");
+    'use strict';
+
+    var element = document.querySelector("#saveButton"),
+        element2 = document.querySelector("#shuffleButton");
         
-    if (typeof Storage !== "undefined") {
-        var element = form.querySelector("#saveButton"),
-            element2 = form.querySelector("#shuffleButton");
-        
-        element.addEventListener("click", saveArray);
-        element2.addEventListener("click", shuffleArray);
-    }
+    element.addEventListener("click", saveArray);
+    element2.addEventListener("click", shuffleArray);
 }
 
+// add window eventListener for Load
+window.addEventListener("load", init);
