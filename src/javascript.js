@@ -26,7 +26,7 @@ function shuffleArray() {
         lngth = startArray.length;
                                     
     for (let i = 0; i < lngth; i = i + 1) {
-        let num = Math.floor(startArray.length * Math.random());
+        let num = Math.floor(tempArray.length * Math.random());
         let word = tempArray[num];
         tempArray.splice(num, 1);
         shuffledArray.push(word);
