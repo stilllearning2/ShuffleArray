@@ -3,7 +3,7 @@
 
 function saveArray() {
     'use strict';
-    const arrayDiv = document.querySelector("#arrayDiv"),
+    var arrayDiv = document.querySelector("#arrayDiv"),
           inputs = document.getElementsByTagName("input"),
           output = [];
     
@@ -19,7 +19,7 @@ function saveArray() {
 function shuffleArray() {
     'use strict';
 
-    const shuffledArray = [],
+    var shuffledArray = [],
           shuffledArrayDiv = document.querySelector("#shuffledArrayDiv"),   
           start = document.querySelector("#arrayDiv").innerHTML,
           startArray = start.split(", "),
@@ -38,7 +38,7 @@ function shuffleArray() {
 function init() {
     'use strict';
 
-    const element = document.querySelector("#saveButton"),
+    var element = document.querySelector("#saveButton"),
           element2 = document.querySelector("#shuffleButton");
         
     element.addEventListener("click", saveArray);
