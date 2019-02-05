@@ -20,13 +20,14 @@ function shuffleArray() {
     'use strict';
 
     var shuffledArray = [],
-        shuffledArrayDiv = document.querySelector("#shuffledArrayDiv"), 
-        lngth = startArray.length;
+        shuffledArrayDiv = document.querySelector("#shuffledArrayDiv"),
+        tempArray = startArray,
+        lngth = tempArray.length;
                                     
     for (let i = 0; i < lngth; i = i + 1) {
         let num = Math.floor(startArray.length * Math.random());
-        let word = startArray[num];
-        startArray.splice(num, 1);
+        let word = tempArray[num];
+        tempArray.splice(num, 1);
         shuffledArray.push(word);
     }
 
