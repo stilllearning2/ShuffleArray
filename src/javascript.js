@@ -21,7 +21,7 @@ function shuffleArray() {
 
     var shuffledArray = [],
         shuffledArrayDiv = document.querySelector("#shuffledArrayDiv"),
-        tempArray = startArray,
+        tempArray = startArray.slice(0),
         lngth = tempArray.length;
                                     
     for (let i = 0; i < lngth; i = i + 1) {
