@@ -43,9 +43,9 @@ function init() {
     var element = document.querySelector("#saveButton"),
         element2 = document.querySelector("#shuffleButton");
         
-    element.addEventListener("click", saveArray);
-    element2.addEventListener("click", shuffleArray);
+    element.addEventListener("click", saveArray, false);
+    element2.addEventListener("click", shuffleArray, false);
 }
 
 // add window eventListener for Load
-window.addEventListener("load", init);
+window.addEventListener("load", init, false);
