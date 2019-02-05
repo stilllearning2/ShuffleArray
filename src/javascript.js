@@ -8,6 +8,7 @@ function saveArray() {
         inputs = document.getElementsByTagName("input");
     
     // load words to array
+    startArray = [];
     for (let i = 0; i < inputs.length; i = i + 1) {
         startArray.push(inputs[i].value);
     }  
