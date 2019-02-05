@@ -1,29 +1,27 @@
 /*global window: false */
 /*global document: false */
+var startArray = [];
 
 function saveArray() {
     'use strict';
     var arrayDiv = document.querySelector("#arrayDiv"),
-          inputs = document.getElementsByTagName("input"),
-          output = [];
+        inputs = document.getElementsByTagName("input");
     
     // load words to array
     for (let i = 0; i < inputs.length; i = i + 1) {
-        output.push(inputs[i].value);
+        startArray.push(inputs[i].value);
     }  
     
     // display array
-    arrayDiv.innerHTML = output.join(", ");
+    arrayDiv.innerHTML = startArray.join(", ");
 }
 
 function shuffleArray() {
     'use strict';
 
     var shuffledArray = [],
-          shuffledArrayDiv = document.querySelector("#shuffledArrayDiv"),   
-          start = document.querySelector("#arrayDiv").innerHTML,
-          startArray = start.split(", "),
-          lngth = startArray.length;
+        shuffledArrayDiv = document.querySelector("#shuffledArrayDiv"), 
+        lngth = startArray.length;
                                     
     for (let i = 0; i < lngth; i = i + 1) {
         let num = Math.floor(startArray.length * Math.random());
@@ -39,7 +37,7 @@ function init() {
     'use strict';
 
     var element = document.querySelector("#saveButton"),
-          element2 = document.querySelector("#shuffleButton");
+        element2 = document.querySelector("#shuffleButton");
         
     element.addEventListener("click", saveArray);
     element2.addEventListener("click", shuffleArray);
