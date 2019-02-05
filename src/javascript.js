@@ -3,13 +3,12 @@
 
 function saveArray() {
     'use strict';
-    var arrayDiv = document.querySelector("#arrayDiv"),
-        inputs = document.getElementsByTagName("input"),
-        output = [],
-        i;
+    const arrayDiv = document.querySelector("#arrayDiv"),
+          inputs = document.getElementsByTagName("input"),
+          output = [];
     
     // load words to array
-    for (i = 0; i < inputs.length; i = i + 1) {
+    for (let i = 0; i < inputs.length; i = i + 1) {
         output.push(inputs[i].value);
     }  
     
@@ -20,18 +19,15 @@ function saveArray() {
 function shuffleArray() {
     'use strict';
 
-    var shuffledArray = [],
-        shuffledArrayDiv = document.querySelector("#shuffledArrayDiv"),   
-        start = document.querySelector("#arrayDiv").innerHTML,
-        startArray = start.split(", "),
-        lngth = startArray.length,
-        i,
-        num,
-        word;
+    const shuffledArray = [],
+          shuffledArrayDiv = document.querySelector("#shuffledArrayDiv"),   
+          start = document.querySelector("#arrayDiv").innerHTML,
+          startArray = start.split(", "),
+          lngth = startArray.length;
                                     
-    for (i = 0; i < lngth; i = i + 1) {
-        num = Math.floor(startArray.length * Math.random());
-        word = startArray[num];
+    for (let i = 0; i < lngth; i = i + 1) {
+        let num = Math.floor(startArray.length * Math.random());
+        let word = startArray[num];
         startArray.splice(num, 1);
         shuffledArray.push(word);
     }
@@ -42,8 +38,8 @@ function shuffleArray() {
 function init() {
     'use strict';
 
-    var element = document.querySelector("#saveButton"),
-        element2 = document.querySelector("#shuffleButton");
+    const element = document.querySelector("#saveButton"),
+          element2 = document.querySelector("#shuffleButton");
         
     element.addEventListener("click", saveArray);
     element2.addEventListener("click", shuffleArray);
